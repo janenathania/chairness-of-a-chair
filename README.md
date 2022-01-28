@@ -9,7 +9,7 @@ This repository contains source of codes and informations about the hardwares an
 - [ARDUINO](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#arduino)
 - [PROCESSING](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#processing)
 - [TRACKING](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#tracking)
-- [FLASHING](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#prototypes)
+- [PROTOTYPE](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#prototypes)
 
 ## HARDWARE
 
@@ -42,9 +42,15 @@ https://github.com/EFeru/hoverboard-sideboard-hack-STM#flashing
 
 ## CONTROLLER
 
-(TODO) Photos of the controller, Joy Stick from Arduino Kit, 3D Printed Cover
+(TODO) Code for the controller (input and output, sending and receiving)
+
+<img src="https://user-images.githubusercontent.com/77440248/151609993-f13bb5a5-c5b9-49c2-88a9-efb06408dc7e.jpg" width="300"/> <img src="https://user-images.githubusercontent.com/77440248/151610040-703d8e17-dfa0-4916-9c87-662558387574.jpg" width="300"/>
+
+The controller are made main from an arudino joystick kit and it is covered with a 3D printed cover. To make it a cleaner look and more rigid body. It makes the controller easier to hold it and comfortable while using it, so that the controllers can controll the chair precisely.
 
 ## TRACKING
+
+(OPTIONAL)
 
 ## PROTOTYPES
 
@@ -56,6 +62,8 @@ The board acts not only as a support that connect hoverboard and the chair, but 
 
 <img src="https://user-images.githubusercontent.com/77440248/151608508-0ca63d9b-1e95-4ca1-adb6-35e174e6f20e.png" width="300"/> <img src="https://user-images.githubusercontent.com/77440248/151608591-879c75f1-8ebe-472b-8860-7dc619d72607.png" width="300"/> <img src="https://user-images.githubusercontent.com/77440248/151608778-fb026589-fa99-44a2-a673-da10f999b1d8.png" width="150"/>
 
+The final design of the chair. The shape of the chair is chosen after several user tests to decide which shape is the safest to ride on. The important feature of the moving chair is its backrest. It is to protect the user from falling over during sudden movement of the chair.
+The board at the bottom is made quite broad. It is made like that to make sure that the user has enough space to place their feet on it and feel sturdy while sitting on the chair. The board itself has in total 5 wheels. 2 wheels are from the hoverboard that can move following the controllers input and the other 3 wheels are the supporting wheels (2 in front and 1 at the back) to make sure that the whole chair doesn't flip over during sudden movement or sudden break.
 
 ### Notes
 Interaktive Medien - 5. Semester - Wicked Things
