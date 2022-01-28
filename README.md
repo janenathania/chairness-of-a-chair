@@ -10,3 +10,5 @@ Interaktive Medien - 5. Semester - Wicked Things
   - Prototypes -> aktueller
 
 - Bilder, Formulieren
+
+HARDWARE
