@@ -8,6 +8,7 @@ This repository contains source of codes and informations about the hardwares an
 - [FLASHING](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#flashing)
 - [ARDUINO](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#arduino)
 - [PROCESSING](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#processing)
+- [CONTROLLER](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#controller)
 - [TRACKING](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#tracking)
 - [PROTOTYPE](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#prototypes)
 
