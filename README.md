@@ -4,7 +4,8 @@
 This repository contains source of codes and informations about the hardwares and its hacking. Everything that is needed to hack a hoverboard and control it with Arduino and Processing to make a fully functional remote controlled moving chair can be found here. Some codes and methods are taken from other GitHub Repositories as well, the link will be provided in in the description.
 
 ## TABLE OF CONTENT
-[HARDWARE](docs/HARDWARE.md)
+- [HARDWARE](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#hardware)
+- [FLASHING](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#flashing)
 
 ## HARDWARE
 
