@@ -6,6 +6,10 @@ This repository contains source of codes and informations about the hardwares an
 ## TABLE OF CONTENT
 - [HARDWARE](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#hardware)
 - [FLASHING](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#flashing)
+- [ARDUINO](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#arduino)
+- [PROCESSING](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#processing)
+- [TRACKING](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#tracking)
+- [FLASHING](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#prototypes)
 
 ## HARDWARE
 
@@ -28,6 +32,16 @@ https://github.com/lucysrausch/hoverboard-firmware-hack#flashing
 
 And the various method of flashing can be found in the GitHub repository by EFeru
 https://github.com/EFeru/hoverboard-sideboard-hack-STM#flashing
+
+## ARDUINO
+
+## PROCESSING
+
+## CONTROLLER
+
+## TRACKING
+
+## PROTOTYPES
 
 ### Notes
 Interaktive Medien - 5. Semester - Wicked Things
