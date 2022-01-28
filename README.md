@@ -42,10 +42,10 @@ https://github.com/HybridThingsLab/wicked-things-2021/tree/main/01_playground/Ar
 
 ## PROCESSING
 
+(TODO) General Explanation of the code, the connection between hoverboard, programm, arduino and controller's input
+
 GitHub Repository from HybridThingsLab
 https://github.com/HybridThingsLab/wicked-things-2021/tree/main/01_playground/Processing
-
-(TODO) General Explanation of the code, the connection between hoverboard, programm, arduino and controller's input
 
 ## CONTROLLER
 
