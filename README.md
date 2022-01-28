@@ -19,7 +19,7 @@ The main model of the chip is STM32F103.
 
 <img src="https://user-images.githubusercontent.com/77440248/151607800-edf9a9e2-9648-49fb-9b58-bb1d83cd3ad4.png" width="350"/> <img src="https://user-images.githubusercontent.com/77440248/151600772-356a5a8d-d064-4ff4-ac20-b5cc60d0df6a.png" width="350"/>
 
-Further information and instruction can be found in a GitHub repository by lucysrausch
+Further information and instruction can be found in a GitHub Repository by lucysrausch
 https://github.com/lucysrausch/hoverboard-firmware-hack
 
 ## FLASHING
@@ -30,14 +30,20 @@ The method is called flashing. There are several methods to do the flashing
 Further description about flashing can be read here
 https://github.com/lucysrausch/hoverboard-firmware-hack#flashing
 
-And the various method of flashing can be found in the GitHub repository by EFeru
+And the various method of flashing can be found in the GitHub Repository by EFeru
 https://github.com/EFeru/hoverboard-sideboard-hack-STM#flashing
 
 ## ARDUINO
 
 (TODO) General Explanation of the code, the connection between hoverboard, programm, processing and controller's input
 
+GitHub Repository from HybridThingsLab
+https://github.com/HybridThingsLab/wicked-things-2021/tree/main/01_playground/Arduino
+
 ## PROCESSING
+
+GitHub Repository from HybridThingsLab
+https://github.com/HybridThingsLab/wicked-things-2021/tree/main/01_playground/Processing
 
 (TODO) General Explanation of the code, the connection between hoverboard, programm, arduino and controller's input
 
