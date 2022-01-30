@@ -9,8 +9,8 @@ This repository contains source of codes and informations about the hardwares an
 - [SERIAL INTERFACE](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#serial_interface)
 - [ARDUINO](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#arduino)
 - [PROCESSING](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#processing)
-- [3D PRINT](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#3d_print)
 - [PROTOTYPE](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#prototypes)
+- [3D PRINT](https://github.com/janenathania/chairness-of-a-chair/blob/main/README.md#3d_print)
 
 ## HARDWARE
 
@@ -19,109 +19,96 @@ The main model of the chip is STM32F103.
 
 <img src="https://user-images.githubusercontent.com/77440248/151607800-edf9a9e2-9648-49fb-9b58-bb1d83cd3ad4.png" width="350"/> <img src="https://user-images.githubusercontent.com/77440248/151600772-356a5a8d-d064-4ff4-ac20-b5cc60d0df6a.png" width="350"/>
 
-Further information and instruction can be found in a GitHub Repository by lucysrausch
-https://github.com/lucysrausch/hoverboard-firmware-hack
+Further information and instruction can be found in a GitHub Repository by lucysrausch <br/>
+https://github.com/lucysrausch/hoverboard-firmware-hack <br/>
+https://github.com/EFeru/hoverboard-firmware-hack-FOC
 
 ## FLASHING
 
 In order to control the hoverboard we have to hack the firmware first. Fristly we have to erase every progamms that are built in the hoverboard.
 The method is called flashing. There are several methods to do the flashing
 
-Further description about flashing can be read here
+Further description about flashing can be read here <br/>
 https://github.com/lucysrausch/hoverboard-firmware-hack#flashing
 
-And the various method of flashing can be found in the GitHub Repository by EFeru
+And the various method of flashing can be found in the GitHub Repository by EFeru <br/>
 https://github.com/EFeru/hoverboard-sideboard-hack-STM#flashing
 
-(Method: VARIANT_USART)
+The Method that we follow to make this project is `VARIANT_USART`
 
 ## SERIAL INTERFACE
+### ESP Code
 
 Parts used:
-Hoverboard with STM32F103 chip
-ESP8266
-DC/DC Converter
-Wireless Router (tp-link TL-MR3020)
+- Hoverboard with STM32F103 chip
+- ESP8266
+- DC/DC Converter
+- Wireless Router (we use tp-link TL-MR3020)
 
-When you are using a ESP for the first time, follow the instructions to get ready to use it: https://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/
+If you are using a ESP for the first time, follow these instructions to get ready to use it: https://randomnerdtutorials.com/how-to-install-esp8266-board-arduino-ide/
 
-Include the two libraries to your Arduino IDE:https://github.com/siteswapjuggler/RAMP  ramp for motorshttps://sojamo.de/libraries/oscP5/network protocoll for wireless communication betweenprocessing and esp
+Then import these two libraries to your Arduino IDE:
+- Ramp for motors https://github.com/siteswapjuggler/RAMP
+- Protocoll for wireless communication between Processing and ESP https://sojamo.de/libraries/oscP5/network
 
-You need an Wireless Router with an AP Mode. In the Code you have to change the ssid = "maschinenraum" and pwd = "maschinenraum".
-Set your ssid and password instead of "maschinenraum". 
-When you built two chairs like us, change the last digit of the ip for the second ESP:
-const IPAddress ip(192, 168, 1, 202); change the 202 to 203.
+You need a Wireless Router with an AP Mode. In the Code you have to change the SSID and PWD into your own password for the router
+If you are building two chairs like us, you might have to change the last digit of the IPAddress for the second ESP
+Each Chair requires 1 ESP and the IPAdress should be different from each other
 
-![image](https://user-images.githubusercontent.com/77440248/151657172-a148da69-c341-4123-b19f-6487a0d3ba0e.png)
+`const IPAddress ip(192, 168, 1, 202); change the 202 to 203.`
+
+<img src="https://user-images.githubusercontent.com/77440248/151657172-a148da69-c341-4123-b19f-6487a0d3ba0e.png" width="500"/>
 
 After that you can upload our ESP-Code to your ESP. 
-Now you can disconnect the Sideboard which is on the side of the mainboard. Take your ESP and DC Converter and connect everything like that:
-•  the 15V red wire goes to the left wire of the converter, which is labeled with in
-•  the TX blue wire goes to the RX pin oft the ESP•  the RX green wire goes to the TX pin of the ESP
-•  the GND black wire goes to the middle wire of the converter with the   label
-•  connect another black wire to it an put it on the GND pin on the ESP
-•  the last wire of the converter (adjust 5V out) goust to the Vin pin of the ESP 
 
-![image](https://user-images.githubusercontent.com/77440248/151657231-8c02906d-379f-44cd-a9d5-13ed2c650a48.png)
+### ESP Build
+
+Disconnect the Sideboard which is on the side of the mainboard. Take your ESP and DC Converter and connect everything like this:
+- 15V red wire goes to the left wire of the converter, which is labeled with `in`
+- TX blue wire goes to the RX pin of the ESP
+- RX green wire goes to the TX pin of the ESP
+- GND black wire goes to the middle wire of the converter with the `ground` label
+- connect another black wire to the middle wire of the converter and put it on the GND pin on the ESP
+- the last wire of the converter (adjust 5V out) goes to the Vin pin of the ESP 
+
+<img src="https://user-images.githubusercontent.com/77440248/151657231-8c02906d-379f-44cd-a9d5-13ed2c650a48.png" width="500"/>
 
 ## ARDUINO
 
-(TODO) General Explanation of the code, the connection between hoverboard, programm, processing and controller's input
-
 Parts used:
-1x Arduino Uno
-1x Seedstudio Grove Shield
-2x Seedstudio Grove Joystick
+- 1x Arduino Uno
+- 1x Seedstudio Grove Shield
+- 2x Seedstudio Grove Joystick
 
 Our Code is able to steer two hoverboards at the same time.
 
-We used an Arduino Uno with the Seedstudio Grove Shield on top and connected the first Seedstudio Grove Joystick to the A0 and the second Joystick to the A2 Connector of the Grove Shield.
+We used an Arduino Uno with the Seedstudio Grove Shield on top and we connect the first Seedstudio Grove Joystick to the A0 and the second Joystick to the A2 Connector of the Grove Shield.
 
 We send the coordinates of the Joysticks as a string over the serial port.
 
-GitHub Repository from HybridThingsLab
+GitHub Repository from HybridThingsLab <br/>
 https://github.com/HybridThingsLab/wicked-things-2021/tree/main/01_playground/Arduino
 
 ## PROCESSING
 
-(TODO) General Explanation of the code, the connection between hoverboard, programm, arduino and controller's input
-
 Processing is able to read the data from the Arduino and send it over WLAN to the ESP.
 
-To be sure everything is working correctly you need Processing 4.
+To make sure that everything is working correctly you need use Processing 4 as the software.
 
-Open the processing code and connect the arduino to your pc. Run the code and check if there is an error. If so that means the code uses the wron usb port. Check the number of your port which your arduino is connected to and change it in the code.
+Open the processing code (that you can find in the folder above) and connect your arduino to your pc. Run the code and check if there is an error. If so that means the code uses the wrong usb port. Check the number of your port on which your arduino is connected to and change it in the code.
 
-![image](https://user-images.githubusercontent.com/77440248/151657297-9a5a3cc4-35cf-4680-81e3-b410ae3fe2b5.png)
+<img src="https://user-images.githubusercontent.com/77440248/151657297-9a5a3cc4-35cf-4680-81e3-b410ae3fe2b5.png" width="600"/>
 
-When there are two squares and you can move them with the joysticks, then everything is working fine.
+If there are two squares and you can move them with the joysticks, then everything is working fine.
 
 Now start the hoverboard and connect the Wlan of your PC with the Router and run the processing code .
 
-If everything is correct your hoverboard should move if you use the joysticks.
+If everything is correct, your hoverboard should move if you use the joysticks.
 
-![image](https://user-images.githubusercontent.com/77440248/151657319-057fbf59-370b-4331-8d10-83c9547a528a.png)
+<img src="https://user-images.githubusercontent.com/77440248/151657319-057fbf59-370b-4331-8d10-83c9547a528a.png" width="250"/>
 
-GitHub Repository from HybridThingsLab
+GitHub Repository from HybridThingsLab <br/>
 https://github.com/HybridThingsLab/wicked-things-2021/tree/main/01_playground/Processing
-
-## 3D PRINT
-
-(TODO) Code for the controller (input and output, sending and receiving)
-
-Controller
-![image](https://user-images.githubusercontent.com/77440248/151657341-2edd07da-48df-49e2-87d1-cc1b9053c958.png)
-
-Arduino + Grove Shield
-![image](https://user-images.githubusercontent.com/77440248/151657417-ebe13f8d-c7a7-48c3-b7b2-5f384e9db4d1.png)
-
-ESP
-![image](https://user-images.githubusercontent.com/77440248/151657423-f311951b-1c3f-41c3-bacf-bf268a4fae0a.png)
-
-
-<img src="https://user-images.githubusercontent.com/77440248/151609993-f13bb5a5-c5b9-49c2-88a9-efb06408dc7e.jpg" width="300"/> <img src="https://user-images.githubusercontent.com/77440248/151610040-703d8e17-dfa0-4916-9c87-662558387574.jpg" width="300"/>
-
-The controller are made main from an arudino joystick kit and it is covered with a 3D printed cover. To make it a cleaner look and more rigid body. It makes the controller easier to hold it and comfortable while using it, so that the controllers can controll the chair precisely.
 
 ## PROTOTYPES
 
@@ -136,15 +123,12 @@ The board acts not only as a support that connect hoverboard and the chair, but 
 The final design of the chair. The shape of the chair is chosen after several user tests to decide which shape is the safest to ride on. The important feature of the moving chair is its backrest. It is to protect the user from falling over during sudden movement of the chair.
 The board at the bottom is made quite broad. It is made like that to make sure that the user has enough space to place their feet on it and feel sturdy while sitting on the chair. The board itself has in total 5 wheels. 2 wheels are from the hoverboard that can move following the controllers input and the other 3 wheels are the supporting wheels (2 in front and 1 at the back) to make sure that the whole chair doesn't flip over during sudden movement or sudden break.
 
-### Notes
-Interaktive Medien - 5. Semester - Wicked Things
+## 3D PRINT
 
-- Table of Content
-  - Board Types (Chips)
-  - Flashing -> EFeru Tutorial
-  - Arduino + Processing -> GitHub von HybridThingsLab
-  - Controller (Code + Design)
-  - (Tracking: Extra)
-  - Prototypes -> aktueller
+This is our extra parts. We make the cover for controllers, Arduino and ESP with 3D Print. You can make it with anything you like. But we attached the raw files of the 3D Models so you can try to 3D Print it if you have a 3D Printer.
 
-- Bilder, Formulieren
+<img src="https://user-images.githubusercontent.com/77440248/151657341-2edd07da-48df-49e2-87d1-cc1b9053c958.png" width="300"/> <img src="https://user-images.githubusercontent.com/77440248/151657417-ebe13f8d-c7a7-48c3-b7b2-5f384e9db4d1.png" width="300"/> <img src="https://user-images.githubusercontent.com/77440248/151657423-f311951b-1c3f-41c3-bacf-bf268a4fae0a.png" width="300"/>
+
+The controller are made main from an arudino joystick kit and it is covered with a 3D printed cover. To make it a cleaner look and more rigid body. It makes the controller easier to hold it and comfortable while using it, so that the controllers can controll the chair precisely. <br/>
+
+<img src="https://user-images.githubusercontent.com/77440248/151609993-f13bb5a5-c5b9-49c2-88a9-efb06408dc7e.jpg" width="300"/> <img src="https://user-images.githubusercontent.com/77440248/151610040-703d8e17-dfa0-4916-9c87-662558387574.jpg" width="300"/>
