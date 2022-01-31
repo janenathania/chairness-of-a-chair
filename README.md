@@ -35,7 +35,7 @@ https://github.com/EFeru/hoverboard-sideboard-hack-STM#flashing
 
 We also follow the instructions from this GitHub repository
 The Method that we follow to make this project is `VARIANT_USART` <br/>
-https://github.com/EFeru/hoverboard-firmware-hack-FOC#hardware
+https://github.com/EFeru/hoverboard-firmware-hack-FOC
 
 ## SERIAL INTERFACE
 ### ESP Code
@@ -77,6 +77,7 @@ Disconnect the Sideboard which is on the side of the mainboard. Take your ESP an
 Orinial Links of the images <br/>
 - https://m.media-amazon.com/images/I/51Z9NoCxWwL._SL1000_.jpg
 - https://wiki.volkszaehler.org/_media/hardware/controllers/amica-nodemcu-esp8266-lua-cp2102-wifi-development-module-iot-gujarat.png
+- https://github.com/EFeru/hoverboard-firmware-hack-FOC/blob/master/docs/pictures/mainboard_pinout.png
 
 ## ARDUINO
 
