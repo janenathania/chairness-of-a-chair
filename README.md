@@ -20,8 +20,7 @@ The main model of the chip is STM32F103.
 <img src="https://user-images.githubusercontent.com/77440248/151607800-edf9a9e2-9648-49fb-9b58-bb1d83cd3ad4.png" width="350"/> <img src="https://user-images.githubusercontent.com/77440248/151600772-356a5a8d-d064-4ff4-ac20-b5cc60d0df6a.png" width="350"/>
 
 Further information and instruction can be found in a GitHub Repository by lucysrausch <br/>
-https://github.com/lucysrausch/hoverboard-firmware-hack <br/>
-https://github.com/EFeru/hoverboard-firmware-hack-FOC
+https://github.com/lucysrausch/hoverboard-firmware-hack
 
 ## FLASHING
 
@@ -34,7 +33,9 @@ https://github.com/lucysrausch/hoverboard-firmware-hack#flashing
 And the various method of flashing can be found in the GitHub Repository by EFeru <br/>
 https://github.com/EFeru/hoverboard-sideboard-hack-STM#flashing
 
-The Method that we follow to make this project is `VARIANT_USART`
+We also follow the instructions from this GitHub repository
+The Method that we follow to make this project is `VARIANT_USART` <br/>
+https://github.com/EFeru/hoverboard-firmware-hack-FOC#hardware
 
 ## SERIAL INTERFACE
 ### ESP Code
@@ -72,6 +73,10 @@ Disconnect the Sideboard which is on the side of the mainboard. Take your ESP an
 - the last wire of the converter (adjust 5V out) goes to the Vin pin of the ESP 
 
 <img src="https://user-images.githubusercontent.com/77440248/151657231-8c02906d-379f-44cd-a9d5-13ed2c650a48.png" width="500"/>
+
+Orinial Links of the images <br/>
+- https://m.media-amazon.com/images/I/51Z9NoCxWwL._SL1000_.jpg
+- https://wiki.volkszaehler.org/_media/hardware/controllers/amica-nodemcu-esp8266-lua-cp2102-wifi-development-module-iot-gujarat.png
 
 ## ARDUINO
 
