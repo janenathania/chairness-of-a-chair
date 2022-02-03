@@ -27,13 +27,10 @@ https://github.com/lucysrausch/hoverboard-firmware-hack
 In order to control the hoverboard we have to hack the firmware first. Fristly we have to erase every progamms that are built in the hoverboard.
 The method is called flashing. There are several methods to do the flashing
 
-Further description about flashing can be read here <br/>
-https://github.com/lucysrausch/hoverboard-firmware-hack#flashing
+We follow the whole procedure from this website <br/>
+http://bauhausinteraction.org/opl/how-to-control-a-hoverboard-with-an-arduino/
 
-And the various method of flashing can be found in the GitHub Repository by EFeru <br/>
-https://github.com/EFeru/hoverboard-sideboard-hack-STM#flashing
-
-We also follow the instructions from this GitHub repository
+And more detailed instructions can be found from this GitHub repository
 The Method that we follow to make this project is `VARIANT_USART` <br/>
 https://github.com/EFeru/hoverboard-firmware-hack-FOC
 
